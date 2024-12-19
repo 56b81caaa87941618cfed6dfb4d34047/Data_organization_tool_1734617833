@@ -39,5 +39,15 @@
         "source": "tool:EditFrontendComponent",
         "content": "Okay, I'm setting up the Three.js 3D cube scene in your Hero component...",
         "metadata": {}
+    },
+    {
+        "id": "ef252eb3-9a6d-403e-888e-76b6e06f0b94",
+        "timestamp": "2024-12-19T14:24:30.644673Z",
+        "role": "tool_result",
+        "source": "EditFrontendComponent",
+        "content": "@@ -1,7 +1,52 @@\n import React from 'react';\n+import * as THREE from 'three';\n \n const Hero: React.FC = () => {\n+  const sceneRef = React.useRef<HTMLDivElement>(null);\n   \n+  React.useEffect(() => {\n+    if (sceneRef.current) {\n+      const scene = new THREE.Scene();\n+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);\n+      const renderer = new THREE.WebGLRenderer();\n+      renderer.setSize(400, 300);\n+      sceneRef.current.appendChild(renderer.domElement);\n+\n+      const geometry = new THREE.BoxGeometry(1, 1, 1);\n+      const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });\n+      const cube = new THREE.Mesh(geometry, material);\n+      scene.add(cube);\n+\n+      const light = new THREE.PointLight(0xffffff, 1, 100);\n+      light.position.set(0, 0, 10);\n+      scene.add(light);\n+\n+      camera.position.z = 5;\n+\n+      const animate = () => {\n+        requestAnimationFrame(animate);\n+        cube.rotation.x += 0.01;\n+        cube.rotation.y += 0.01;\n+        renderer.render(scene, camera);\n+      };\n+\n+      animate();\n+\n+      const handleResize = () => {\n+        camera.aspect = window.innerWidth / window.innerHeight;\n+        camera.updateProjectionMatrix();\n+        renderer.setSize(400, 300);\n+      };\n+\n+      window.addEventListener('resize', handleResize);\n+\n+      return () => {\n+        window.removeEventListener('resize', handleResize);\n+        sceneRef.current?.removeChild(renderer.domElement);\n+      };\n+    }\n+  }, []);\n+\n   return (\n     <div className=\"bg-black py-16 text-white w-full h-full\">\n       <div className=\"container mx-auto px-4 flex flex-col md:flex-row items-center h-full\">\n",
+        "metadata": {
+            "tool_call_id": "call_Xw3lCbdYMDt2tUmi9lKtax9v"
+        }
     }
 ]
