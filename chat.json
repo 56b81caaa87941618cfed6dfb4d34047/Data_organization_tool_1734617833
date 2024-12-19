@@ -159,5 +159,56 @@
         "source": "base_assistant",
         "content": "The light intensity has been increased for better visibility. Would you like any more adjustments?",
         "metadata": {}
+    },
+    {
+        "id": "639116de-60d0-411c-bc7d-69ed2f2ce990",
+        "timestamp": "2024-12-19T14:26:25.912194Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "make the background white",
+        "metadata": {
+            "component_id": "Hero1734617837"
+        }
+    },
+    {
+        "id": "d3b48742-1f7f-400c-9cb4-102f98cdf700",
+        "timestamp": "2024-12-19T14:26:28.412952Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_zXc00DBi2y0DJalKCj8ylOdG",
+            "function": {
+                "arguments": "{\"component_id\": \"Hero1734617837\", \"change_description\": \"Change the background color of the scene to white.\", \"acknowledgement_message\": \"Okay, I'm changing the background color to white...\"}",
+                "name": "EditFrontendComponent"
+            },
+            "type": "function"
+        }
+    },
+    {
+        "id": "25b93dbf-24e0-4003-ad07-f89e784d546d",
+        "timestamp": "2024-12-19T14:26:28.479177Z",
+        "role": "assistant",
+        "source": "tool:EditFrontendComponent",
+        "content": "Okay, I'm changing the background color to white...",
+        "metadata": {}
+    },
+    {
+        "id": "e4a65050-fba1-4dd9-ab67-2b8506d73447",
+        "timestamp": "2024-12-19T14:26:33.895609Z",
+        "role": "tool_result",
+        "source": "EditFrontendComponent",
+        "content": "",
+        "metadata": {
+            "tool_call_id": "call_zXc00DBi2y0DJalKCj8ylOdG"
+        }
+    },
+    {
+        "id": "1e5a9f99-c89d-4175-b961-4cd94faac7d6",
+        "timestamp": "2024-12-19T14:26:35.170960Z",
+        "role": "assistant",
+        "source": "base_assistant",
+        "content": "The background color of the scene has been changed to white. Is there anything else you would like to adjust?",
+        "metadata": {}
     }
 ]
