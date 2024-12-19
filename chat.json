@@ -6,5 +6,15 @@
         "source": "base_assistant",
         "content": "Welcome to your new project! I can help you edit it however you want. What would you like to do?",
         "metadata": {}
+    },
+    {
+        "id": "d5670823-eee9-40fb-b835-0bc53bfb7a32",
+        "timestamp": "2024-12-19T14:24:13.071971Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "Could you create a React component that displays a rotating 3D cube using Three.js? I'd like the cube to:  Have different colored faces Rotate continuously around the y-axis Allow user interaction with mouse drag to change the viewing angle Have basic lighting with ambient and directional lights Be responsive to the container size Please include any necessary imports and make it reusable.\"",
+        "metadata": {
+            "component_id": "Hero1734617837"
+        }
     }
 ]
