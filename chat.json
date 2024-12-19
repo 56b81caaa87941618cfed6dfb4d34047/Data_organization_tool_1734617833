@@ -108,5 +108,15 @@
         "source": "base_assistant",
         "content": "I've changed the color of the cube to red. Would you like to make any further modifications?",
         "metadata": {}
+    },
+    {
+        "id": "be78010d-9e9d-416b-b695-6eba87cad676",
+        "timestamp": "2024-12-19T14:26:06.524795Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "more light, you can barely see it",
+        "metadata": {
+            "component_id": "Hero1734617837"
+        }
     }
 ]
