@@ -1,0 +1,23 @@
+{
+    "name": "example",
+    "prefix": "%#PLACEHOLDER",
+    "placeholderMappings": {
+        "Header": [
+            "APPLICATION_NAME"
+        ],
+        "Hero": [
+            "HERO_HEADING_TEXT",
+            "HERO_SUBHEADING_TEXT"
+        ],
+        "Footer": [
+            "APPLICATION_NAME",
+            "FOOTER_TEXT"
+        ]
+    },
+    "placeholders": {
+        "APPLICATION_NAME": "DataNexus",
+        "HERO_HEADING_TEXT": "Organize Your Data, Amplify Your Insights",
+        "HERO_SUBHEADING_TEXT": "Streamline your information management with our powerful data organization tool. Transform chaos into clarity and unlock the true potential of your data.",
+        "FOOTER_TEXT": "\u00a9 2023 DataNexus. Empowering data-driven decisions through intelligent organization."
+    }
+}
