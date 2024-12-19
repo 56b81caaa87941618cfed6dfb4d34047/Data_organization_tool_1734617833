@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
       const cube = new THREE.Mesh(geometry, material);
       scene.add(cube);
 
-      const light = new THREE.PointLight(0xffffff, 1, 100);
+      const light = new THREE.PointLight(0xffffff, 2, 100);
       light.position.set(0, 0, 10);
       scene.add(light);
 
