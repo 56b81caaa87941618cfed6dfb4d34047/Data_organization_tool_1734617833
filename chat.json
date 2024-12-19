@@ -108,5 +108,56 @@
         "source": "base_assistant",
         "content": "I've changed the color of the cube to red. Would you like to make any further modifications?",
         "metadata": {}
+    },
+    {
+        "id": "be78010d-9e9d-416b-b695-6eba87cad676",
+        "timestamp": "2024-12-19T14:26:06.524795Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "more light, you can barely see it",
+        "metadata": {
+            "component_id": "Hero1734617837"
+        }
+    },
+    {
+        "id": "fa60e47b-ec32-4034-947d-6a7fc5ff42b8",
+        "timestamp": "2024-12-19T14:26:09.050695Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_KmQztj0qc1S1cDQswizXeXKa",
+            "function": {
+                "arguments": "{\"component_id\": \"Hero1734617837\", \"change_description\": \"Increase the intensity of the light source for better visibility of the 3D cube.\", \"acknowledgement_message\": \"Okay, I'm increasing the light intensity for better visibility...\"}",
+                "name": "EditFrontendComponent"
+            },
+            "type": "function"
+        }
+    },
+    {
+        "id": "b05033cf-4647-4ea8-a0ed-18f3c2e09ce6",
+        "timestamp": "2024-12-19T14:26:09.118186Z",
+        "role": "assistant",
+        "source": "tool:EditFrontendComponent",
+        "content": "Okay, I'm increasing the light intensity for better visibility...",
+        "metadata": {}
+    },
+    {
+        "id": "1d942686-e056-4d27-8f4f-6b4b71a450c5",
+        "timestamp": "2024-12-19T14:26:14.088726Z",
+        "role": "tool_result",
+        "source": "EditFrontendComponent",
+        "content": "",
+        "metadata": {
+            "tool_call_id": "call_KmQztj0qc1S1cDQswizXeXKa"
+        }
+    },
+    {
+        "id": "82fa4aaa-e2d7-4c1b-a7bf-9f9c66174a9e",
+        "timestamp": "2024-12-19T14:26:15.481065Z",
+        "role": "assistant",
+        "source": "base_assistant",
+        "content": "The light intensity has been increased for better visibility. Would you like any more adjustments?",
+        "metadata": {}
     }
 ]
